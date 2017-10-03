@@ -26,10 +26,10 @@
     "eslint": "^4.8.0",
     "eslint-config-google": "^0.9.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.5.3"
+    "mocha": "^4.0.0"
   },
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 4.0"
   },
   "directories": {
     "lib": "./lib"
