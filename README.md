@@ -15,6 +15,7 @@ Extended type schema library for javascript.
   - Data validation
   - Easy type definition with strings
   - 10 built-in types  
+  - Tested with more than 180 unit tests
 
 ## Installation
 
