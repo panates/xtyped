@@ -23,7 +23,7 @@ Extended type schema library for javascript.
   
 ## Node Compatibility
 
-  - node `>= 0.10`;
+  - node `>= 4.0`;
   
 ### License
 [MIT](LICENSE)
