@@ -1,0 +1,47 @@
+{
+  "name": "xtyped",
+  "description": "Extended type schema library for javascript.",
+  "version": "0.0.1",
+  "author": "Panates Ltd.",
+  "contributors": [
+    "Eray Hanoglu <e.hanoglu@panates.com>"
+  ],
+  "license": "MIT",
+  "repository": "panates/xtyped",
+  "main": "lib/schema.js",
+  "keywords": [
+    "javascript",
+    "error",
+    "class",
+    "custom"
+  ],
+  "dependencies": {
+    "errorex": "^1.0.5",
+    "moment": "^2.18.1",
+    "putil-isplainobject": "^1.0.0",
+    "putil-merge": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-google": "^0.9.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.0"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/"
+  ],
+  "scripts": {
+    "test": "mocha --require test/support/env --reporter spec --bail --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/ test/types"
+  }
+}
