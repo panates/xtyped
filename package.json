@@ -11,9 +11,10 @@
   "main": "lib/schema.js",
   "keywords": [
     "javascript",
-    "error",
-    "class",
-    "custom"
+    "schema",
+    "type",
+    "json",
+    "validate"
   ],
   "dependencies": {
     "errorex": "^1.0.5",
