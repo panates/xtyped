@@ -97,7 +97,7 @@ describe('parseTypeDefinition', function() {
   it('should parse max occurs', function(done) {
     var def = parseTypeDefinition('aaa', 'array[5]');
     assert.equal(def.base, 'array');
-    assert.equal(def.subType, 'any');
+    assert.equal(def.items, 'any');
     assert.equal(def.minOccurs, 0);
     assert.equal(def.maxOccurs, 5);
     done();
@@ -106,7 +106,7 @@ describe('parseTypeDefinition', function() {
   it('should parse min-max occurs', function(done) {
     var def = parseTypeDefinition('aaa', 'string[5-8]');
     assert.equal(def.base, 'array');
-    assert.equal(def.subType, 'string');
+    assert.equal(def.items, 'string');
     assert.equal(def.minOccurs, 5);
     assert.equal(def.maxOccurs, 8);
     done();

@@ -88,7 +88,7 @@ describe('XArray', function() {
       assert.ok(typ1.isExtendedFrom('array'));
       assert.equal(typ1.required, undefined);
       assert.equal(typ1.pattern, undefined);
-      assert.equal(typ1.subType.base.name, 'Integer');
+      assert.equal(typ1.items.base.name, 'Integer');
       assert.equal(typ1.minOccurs, 2);
       assert.equal(typ1.maxOccurs, 4);
       var t = 0;
@@ -121,7 +121,7 @@ describe('XArray', function() {
       var typ1 = schema.extend({
         name: 'typ1',
         base: 'array',
-        subType: 'integer',
+        items: 'integer',
         required: true,
         minOccurs: 2,
         maxOccurs: 6
@@ -140,7 +140,7 @@ describe('XArray', function() {
         schema.extend({
           name: 'typ1',
           base: 'array',
-          subType: 'integer',
+          items: 'integer',
           minOccurs: 'a'
         });
       } catch (e) {
@@ -151,7 +151,7 @@ describe('XArray', function() {
         schema.extend({
           name: 'typ1',
           base: 'array',
-          subType: 'integer',
+          items: 'integer',
           maxOccurs: 'a'
         });
       } catch (e) {
@@ -200,7 +200,7 @@ describe('XArray', function() {
     it('should define a generic type', function(done) {
       schema.define('gen1<x>', {
         base: 'array',
-        subType: 'x'
+        items: 'x'
       });
       var typ1 = schema.extend('typ1', 'gen1<string>');
       var val = typ1.decode([1, 2, 3]);
