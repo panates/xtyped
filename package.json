@@ -1,7 +1,7 @@
 {
   "name": "xtyped",
   "description": "Extended type schema library for javascript.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Panates Ltd.",
   "contributors": [
     "Eray Hanoglu <e.hanoglu@panates.com>"
