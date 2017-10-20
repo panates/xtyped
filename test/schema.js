@@ -101,4 +101,15 @@ describe('Schema', function() {
     assert(0);
   });
 
+  it('should assign from other schema', function(done) {
+    var schema = new Schema();
+    schema.define('rate', '!number(1-100)');
+    var schema2 = new Schema();
+    schema2.assign(schema);
+    var typ1 = schema2.extend('typ1', 'rate');
+    var val = typ1.decode('5');
+    assert.equal(val, 5);
+    done();
+  });
+
 });
